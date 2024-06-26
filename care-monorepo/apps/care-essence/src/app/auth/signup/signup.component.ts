@@ -13,17 +13,17 @@ export class SignupComponent implements OnInit {
   constructor(private readonly store: Store) {}
 
   ngOnInit(): void {
-    this.store.dispatch(
-      authActions.updateRouteDescriptions({
-        descriptions: {
-          title: AuthRoutes.signup,
-          description: 'Get Started with Care Essence!',
-        },
-      })
-    );
-
     setTimeout(() => {
+      this.store.dispatch(
+        authActions.updateRouteDescriptions({
+          descriptions: {
+            title: AuthRoutes.signup,
+            description: 'Get Started with Care Essence!',
+          },
+        })
+      );
+
       this.store.dispatch(spinnerActions.toggleSpinner());
-    }, 1000);
+    }, 500);
   }
 }

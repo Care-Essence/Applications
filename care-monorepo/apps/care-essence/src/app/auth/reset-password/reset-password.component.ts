@@ -13,17 +13,17 @@ export class ResetPasswordComponent implements OnInit {
   constructor(private readonly store: Store) {}
 
   ngOnInit(): void {
-    this.store.dispatch(
-      authActions.updateRouteDescriptions({
-        descriptions: {
-          title: AuthRoutes.resetPassword,
-          description: "It's ok! Reset your password.",
-        },
-      })
-    );
-
     setTimeout(() => {
+      this.store.dispatch(
+        authActions.updateRouteDescriptions({
+          descriptions: {
+            title: AuthRoutes.resetPassword,
+            description: "It's ok! Reset your password.",
+          },
+        })
+      );
+
       this.store.dispatch(spinnerActions.toggleSpinner());
-    }, 1000);
+    }, 500);
   }
 }
