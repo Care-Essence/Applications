@@ -1,0 +1,80 @@
+<form>
+  <div class="mb-5">
+    <label class="form-label" for="first_name">First name</label>
+    <input
+      type="text"
+      class="form-control form-control-muted rounded-pill"
+      id="first_name"
+    />
+  </div>
+  <div class="mb-5">
+    <label class="form-label" for="last_name">Last name</label>
+    <input
+      type="text"
+      class="form-control form-control-muted rounded-pill"
+      id="last_name"
+    />
+  </div>
+  <div class="mb-5">
+    <label class="form-label" for="email">Email</label>
+    <input
+      type="email"
+      class="form-control form-control-muted rounded-pill"
+      id="email"
+    />
+  </div>
+  <div class="mb-5">
+    <label class="form-label" for="phone_number">Phone number</label>
+    <input
+      type="tel"
+      class="form-control form-control-muted rounded-pill"
+      id="phone_number"
+    />
+  </div>
+  <div class="mb-5">
+    <label class="form-label" for="profession">Profession</label>
+    <select
+      class="form-select rounded-pill form-control-muted"
+      id="profession"
+      placeholder="Your email"
+      aria-label="Default select example"
+    >
+      <option selected>--Select--</option>
+      <option value="RN">RN</option>
+      <option value="LPN">LPN</option>
+      <option value="CNA">CNA</option>
+      <option value="PT">PT</option>
+    </select>
+  </div>
+  <div class="mb-5">
+    <label class="form-label" for="password">Password</label>
+    <input
+      type="password"
+      class="form-control form-control-muted rounded-pill"
+      id="password"
+    />
+  </div>
+  <div class="mb-5">
+    <label class="form-label" for="confirm_password">Confirm Password</label>
+    <input
+      type="password"
+      class="form-control form-control-muted rounded-pill"
+      id="confirm_password"
+    />
+  </div>
+
+  <div class="text-end">
+    <button type="reset" class="btn btn-light rounded-pill mb-5 me-2 w-full">
+      Cancel
+    </button>
+    <button type="submit" class="btn btn-primary rounded-pill w-full">
+      Save
+    </button>
+  </div>
+</form>
+<div class="mt-7">
+  <small class="me-2">Already have an account?</small>
+  <a [routerLink]="['/auth/login']" class="text-warning text-sm font-semibold"
+    >Sign&nbsp;in</a
+  >
+</div>
