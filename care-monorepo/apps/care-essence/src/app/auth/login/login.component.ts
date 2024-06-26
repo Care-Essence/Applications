@@ -13,17 +13,17 @@ export class LoginComponent implements OnInit {
   constructor(private readonly store: Store) {}
 
   ngOnInit(): void {
-    this.store.dispatch(
-      authActions.updateRouteDescriptions({
-        descriptions: {
-          title: AuthRoutes.login,
-          description: 'Connect to open positions near you',
-        },
-      })
-    );
-
     setTimeout(() => {
+      this.store.dispatch(
+        authActions.updateRouteDescriptions({
+          descriptions: {
+            title: AuthRoutes.login,
+            description: 'Connect to open positions near you',
+          },
+        })
+      );
+
       this.store.dispatch(spinnerActions.toggleSpinner());
-    }, 1000);
+    }, 500);
   }
 }

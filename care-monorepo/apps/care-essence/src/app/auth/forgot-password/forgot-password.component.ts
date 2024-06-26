@@ -14,19 +14,19 @@ export class ForgotPasswordComponent implements OnInit {
   constructor(private readonly store: Store, private readonly router: Router) {}
 
   ngOnInit(): void {
-    this.store.dispatch(
-      authActions.updateRouteDescriptions({
-        descriptions: {
-          title: AuthRoutes.forgotPassword,
-          description:
-            'Enter your email address and we will send you instructions to reset your password.',
-        },
-      })
-    );
-
     setTimeout(() => {
+      this.store.dispatch(
+        authActions.updateRouteDescriptions({
+          descriptions: {
+            title: AuthRoutes.forgotPassword,
+            description:
+              'Enter your email address and we will send you instructions to reset your password.',
+          },
+        })
+      );
+
       this.store.dispatch(spinnerActions.toggleSpinner());
-    }, 1000);
+    }, 500);
   }
 
   reset() {
